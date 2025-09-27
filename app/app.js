@@ -37,10 +37,17 @@ function onKeydown(event) {
     init();
   }
 }
-function write(container, text, speed = writingSpeed, cssClass = "cli") {
+function write(
+  container,
+  text,
+  speed = writingSpeed,
+  cssClass = "cli",
+  fontSize = 70
+) {
   const CLI = document.createElement("div");
   let charIndex = 0;
   container.appendChild(CLI);
+  CLI.style.fontSize = fontSize + "px";
   CLI.classList.add(cssClass);
 
   (function go() {
@@ -64,7 +71,7 @@ function showSlide() {
   root.innerHTML = '';
 
   setTimeout(() => {
-    write(root, SLIDES[current][0]);
+    write(root, SLIDES[current][0], writingSpeed, "cli", SLIDES[current][2]);
   }, 0);
 }
 function run() {

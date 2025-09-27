@@ -1,7 +1,7 @@
-let INITIAL_CURRENT = 40;
+let INITIAL_CURRENT = 20;
 
 const SLIDES = [
-  ["🪲🐞🐜🐝🦟"],
+  ['"I ❤️ JavaScript"', "🔎 🪲🐞🐜🐝🦟"],
   ['"foo" == "foo"'],
   ["10 == 10"],
   ["{} === {}"],
@@ -19,8 +19,9 @@ const SLIDES = [
   ["null == undefined"],
   ["null === undefined"],
   ["0.1 + 0.2"],
-  ["'5' + 3"],
-  ["'5' - 3"],
+  ['"5" + 3'],
+  ['"5" - 3'],
+  ["Math.min() < Math.max()", false, 50],
   ["{} + []", "0"],
   ["[] + {}"],
   ['+"75"'],
@@ -39,8 +40,10 @@ const SLIDES = [
   ['"😎" > "😀"'],
   ['"🍏" > "🍎"'],
   ['"🍕".toUpperCase()'],
+  ['"🌮🌯🍔".includes("🍕")', false, 60],
   ['"4️⃣".length'],
   ['"🔢".length'],
-  ['"🍏🍏".replace("🍏","🍎")'],
+  ["String.fromCodePoint(0x1f4a9)", false, 50],
+  ['"💩💩💩".replace("💩","✅")', false, 50],
   ["I ❤️ JavaScript"]
 ];
