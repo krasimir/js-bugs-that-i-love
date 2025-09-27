@@ -71,8 +71,13 @@ function run() {
   console.log(`run ${current}`);
   const root = $("#app");
   const code = SLIDES[current][0];
+  const predefinedResult = SLIDES[current][1];
   try {
-    const result = (new Function(`return ${code}`))();
+    let result = predefinedResult ? predefinedResult : (new Function(`return ${code}`))();
+    result = result === '' ? '""' : result
+    if (typeof result === 'string') {
+      result = `"${result}"`;
+    }
     write(root, `${result}`, 0, 'result');
     document.body.classList.add('ran');
   } catch(err) {
