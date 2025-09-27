@@ -5,6 +5,7 @@
     "serve": "^14.2.5"
   },
   "scripts": {
-    "dev": "serve -s ./app -l 3000"
+    "dev": "serve -s ./app -l 8080",
+    "release": "gcloud builds submit --config cloudbuild.yaml"
   }
 }

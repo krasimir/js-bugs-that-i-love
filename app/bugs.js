@@ -1,4 +1,4 @@
-let INITIAL_CURRENT = 20;
+let INITIAL_CURRENT = 0;
 
 const SLIDES = [
   ['"I ❤️ JavaScript"', "🔎 🪲🐞🐜🐝🦟"],
@@ -24,6 +24,8 @@ const SLIDES = [
   ["Math.min() < Math.max()", false, 50],
   ["{} + []", "0"],
   ["[] + {}"],
+  ["null + 1"],
+  ["null * 5"],
   ['+"75"'],
   ["+[]"],
   ["+!![]"],
