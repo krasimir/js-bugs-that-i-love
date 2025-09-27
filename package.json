@@ -1,0 +1,10 @@
+{
+  "name": "js-bugs-that-i-love",
+  "private": true,
+  "dependencies": {
+    "serve": "^14.2.5"
+  },
+  "scripts": {
+    "dev": "serve -s ./app -l 3000"
+  }
+}
